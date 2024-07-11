@@ -34,7 +34,6 @@
     font-size: calc(1vh + 1.5vw);
     font-family: 'Urbanist';
     font-weight: 800;
-    max-width: 70%;
     white-space: pre-line;
     background: linear-gradient(0deg, #ff923f 0%, #fc6f09 100%);
     -webkit-background-clip: text;
