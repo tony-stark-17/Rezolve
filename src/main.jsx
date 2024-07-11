@@ -16,7 +16,7 @@ const loadData = async () => {
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/1",
     element: <QuestionPage index={0}/>,
     loader: loadData
   },
@@ -32,6 +32,16 @@ const router = createBrowserRouter([
   },
   {
     path: "/4",
+    element: <QuestionPage index={3} />,
+    loader: loadData
+  },
+  {
+    path: "/5",
+    element: <QuestionPage index={4} />,
+    loader: loadData
+  },
+  {
+    path: "/6",
     element: <QuestionPage index={5}/>,
     loader: loadData
   },
