@@ -30,11 +30,11 @@
 }
 
 .question{
-    margin-top: 5%;
     text-align: center;
-    font-size: 6rem;
+    font-size: calc(2vh + 2vw);
     font-family: 'Urbanist';
     font-weight: 800;
+    max-width: 70%;
     background: linear-gradient(0deg, #fc6e0971 0%, #fc6f09 100%);
     -webkit-background-clip: text;
             background-clip: text;
@@ -46,4 +46,20 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+@media (max-width: 768px){
+    .header{
+        height: 8%;
+        border-radius: 1rem;
+    }
+    .college-logo{
+        width: 75%;
+    }
+    .logo{
+        width: 75%;
+    }
+    .mu-logo{
+        width: 40%;
+    }
 }
