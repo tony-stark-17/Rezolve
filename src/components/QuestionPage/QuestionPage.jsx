@@ -21,7 +21,7 @@ const QuestionPage = ({ index }) => {
     const [img, setImg] = useState('');
     useEffect(()=>{
         setQuestion(questions[index].question);
-        setAnswers(questions[index].answers);
+        setAnswers(questions[index].answer);
         setLink(questions[index].link);
         if(questions[index].imgLink){
             setImg(questions[index].imgLink);
