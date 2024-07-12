@@ -19,13 +19,20 @@ const QuestionPage = ({ index, imgLink }) => {
     const [answers, setAnswers] = useState();
     const [link, setLink] = useState('');
     const [img, setImg] = useState('');
+    const [isInsta, setIsInsta] = useState(false);
+
     useEffect(()=>{
-        setQuestion(questions[index].question);
-        setAnswers(questions[index].answer);
-        setLink(questions[index].link);
-        if(imgLink){
-            setImg(imgLink);
+        if(!questions[index].isInsta){
+            setAnswers(questions[index].answer);
+            setLink(questions[index].link);
+            if(imgLink){
+                setImg(imgLink);
+            }
+        }else{
+            setIsInsta(true);
+            setLink(questions[index].instaLink);
         }
+        setQuestion(questions[index].question);
     }, [])
 
     const notify = (msg, type) =>{
@@ -68,13 +75,17 @@ const QuestionPage = ({ index, imgLink }) => {
                     {question}
                 </div>
                 {img != '' && <img src={img} alt="Question" className={classes['qImg']}/>}
-                <Input label="Answer" className="w-[50%] mt-10" size="lg" classNames={{
+                {isInsta && <Button color="warning" variant="flat" onPress={redirect} className="mt-10" size="lg">
+                            <Icon icon="mdi:instagram" width="1.4em" height="1.4em"/>
+                            Page Link
+                        </Button>}
+                {!isInsta && <Input label="Answer" className="w-[50%] mt-10" size="lg" classNames={{
                     inputWrapper: 'bg-slate-200 active:bg-slate-200 focus-within:!bg-slate-200',
                 }} endContent={
                     <button className="mb-2" onClick={SubmitAnswer}>
                         <Icon icon="akar-icons:arrow-right" className="text-[#fc6f09] hover:text-[#7048ff] hover:scale-125 transition-all ease-in-out" width="20" height="20"/>
                     </button>
-                } onInput={(e) => setAnswer(e.target.value)} onKeyDown={(e) => (e.code == 'Enter') && SubmitAnswer()}/>
+                } onInput={(e) => setAnswer(e.target.value)} onKeyDown={(e) => (e.code == 'Enter') && SubmitAnswer()}/>}
             </div>
             <Modal isOpen={isOpen} backdrop="blur" isDismissable={false} onClose={onClose}>
                 <ModalContent>
