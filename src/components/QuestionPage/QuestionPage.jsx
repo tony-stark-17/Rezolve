@@ -11,7 +11,7 @@ import Rezolve from '../../assets/rezolve.svg'
 
 import classes from './QuestionPage.module.css';
 
-const QuestionPage = ({ index }) => {
+const QuestionPage = ({ index, imgLink }) => {
     const questions = useLoaderData();
     const {isOpen, onOpen, onClose} = useDisclosure();
     const [question, setQuestion] = useState('');
@@ -23,8 +23,8 @@ const QuestionPage = ({ index }) => {
         setQuestion(questions[index].question);
         setAnswers(questions[index].answer);
         setLink(questions[index].link);
-        if(questions[index].imgLink){
-            setImg(questions[index].imgLink);
+        if(imgLink){
+            setImg(imgLink);
         }
     }, [])
 

@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { NextUIProvider } from '@nextui-org/react'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import qImg from './assets/qImg.jpeg'
 import QuestionPage from './components/QuestionPage';
 
 import './index.css'
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/6",
-    element: <QuestionPage index={5}/>,
+    element: <QuestionPage index={5} imgLink={qImg}/>,
     loader: loadData
   },
 ]);
