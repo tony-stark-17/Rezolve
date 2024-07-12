@@ -53,7 +53,7 @@ const QuestionPage = ({ index, imgLink }) => {
     }
 
     const SubmitAnswer = () =>{
-        if(answers.includes(answer.toLowerCase())){
+        if(answers.includes(answer.trim().toLowerCase())){
             onOpen();
         }else{
             notify('Wrong Answer!', 'error');
