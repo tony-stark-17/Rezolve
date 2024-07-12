@@ -67,7 +67,7 @@ const QuestionPage = ({ index, imgLink }) => {
                 <div className={classes['question']}>
                     {question}
                 </div>
-                {img != '' && <img src={img} alt="Question" className="max-w-[60%] rounded-3xl object-contain"/>}
+                {img != '' && <img src={img} alt="Question" className="max-w-[10%] rounded-3xl object-contain"/>}
                 <Input label="Answer" className="w-[50%] mt-10" size="lg" classNames={{
                     inputWrapper: 'bg-slate-200 active:bg-slate-200 focus-within:!bg-slate-200',
                 }} endContent={
