@@ -48,6 +48,12 @@
     justify-content: flex-end;
 }
 
+.qImg{
+    max-width: 10%;
+    border-radius: 3rem;
+    object-fit: contain;
+}
+
 @media (max-width: 768px){
     .header{
         height: 8%;
@@ -64,5 +70,8 @@
     }
     .question{
         font-size: calc(1.5vh + 1.5vw);
+    }
+    .qImg{
+        max-width: 25%;
     }
 }
