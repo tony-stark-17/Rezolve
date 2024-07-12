@@ -16,6 +16,7 @@ const QuestionPage = ({ index, imgLink }) => {
     const {isOpen, onOpen, onClose} = useDisclosure();
     const [question, setQuestion] = useState('');
     const [answer, setAnswer] = useState('');
+    const [description, setDescription] = useState('');
     const [answers, setAnswers] = useState();
     const [link, setLink] = useState('');
     const [img, setImg] = useState('');
@@ -24,6 +25,7 @@ const QuestionPage = ({ index, imgLink }) => {
     useEffect(()=>{
         if(!questions[index].isInsta){
             setAnswers(questions[index].answer);
+            setDescription(questions[index].answerDetail);
             setLink(questions[index].link);
             if(imgLink){
                 setImg(imgLink);
@@ -93,12 +95,8 @@ const QuestionPage = ({ index, imgLink }) => {
                     <>
                     <ModalHeader className="flex flex-col gap-1 text-xl text-[#fc6f09]">You have passed this level!</ModalHeader>
                     <ModalBody>
-                        <p>
-                        Magna exercitation reprehenderit magna aute tempor cupidatat consequat elit
-                        dolor adipisicing. Mollit dolor eiusmod sunt ex incididunt cillum quis. 
-                        Velit duis sit officia eiusmod Lorem aliqua enim laboris do dolor eiusmod. 
-                        Et mollit incididunt nisi consectetur esse laborum eiusmod pariatur 
-                        proident Lorem eiusmod et. Culpa deserunt nostrud ad veniam.
+                        <p className="whitespace-pre-line">
+                            {description}
                         </p>
                     </ModalBody>
                     <ModalFooter>
