@@ -22,32 +22,32 @@ const router = createBrowserRouter([
     loader: loadData
   },
   {
-    path: "/2",
+    path: "/g265d1k",
     element: <QuestionPage index={1} imgLink={qImg}/>,
     loader: loadData
   },
   {
-    path: "/3",
+    path: "/dj3pt18",
     element: <QuestionPage index={2} />,
     loader: loadData
   },
   {
-    path: "/4",
+    path: "/crta02k",
     element: <QuestionPage index={3} />,
     loader: loadData
   },
   {
-    path: "/5",
+    path: "/y72iwua",
     element: <QuestionPage index={4} />,
     loader: loadData
   },
   {
-    path: "/6",
+    path: "/uhc4z8x",
     element: <QuestionPage index={5}/>,
     loader: loadData
   },
   {
-    path: "/7",
+    path: "/ombf5y2",
     element: <QuestionPage index={6}/>,
     loader: loadData
   },
