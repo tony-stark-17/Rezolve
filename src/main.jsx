@@ -43,12 +43,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/6",
-    element: <QuestionPage index={5} />,
+    element: <QuestionPage index={5} imgLink={qImg}/>,
     loader: loadData
   },
   {
     path: "/7",
-    element: <QuestionPage index={6} imgLink={qImg}/>,
+    element: <QuestionPage index={6}/>,
     loader: loadData
   },
 ]);
