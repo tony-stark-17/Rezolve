@@ -23,12 +23,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/2",
-    element: <QuestionPage index={1} />,
+    element: <QuestionPage index={1} imgLink={qImg}/>,
     loader: loadData
   },
   {
     path: "/3",
-    element: <QuestionPage index={2} imgLink={qImg}/>,
+    element: <QuestionPage index={2} />,
     loader: loadData
   },
   {
