@@ -28,7 +28,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/3",
-    element: <QuestionPage index={2} />,
+    element: <QuestionPage index={2} imgLink={qImg}/>,
     loader: loadData
   },
   {
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/6",
-    element: <QuestionPage index={5} imgLink={qImg}/>,
+    element: <QuestionPage index={5}/>,
     loader: loadData
   },
   {
